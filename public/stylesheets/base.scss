@@ -1,0 +1,252 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
+}
+
+@keyframes loopbg {
+    0% {
+        background: url('../images/loopbg1.png');
+    }
+    33% {
+        background: url('../images/loopbg2.png');
+    }
+    67% {
+        background: url('../images/loopbg3.png');
+    }
+    100% {
+        background: url('../images/loopbg1.png');
+    }
+}
+
+.page {
+    @media (max-height: 600px) {
+        height: 600px;
+    }
+    .container {
+        top: 50%;
+        transform: translate3d(0,-50%,0);
+    }
+}
+.page-fluid {
+    box-sizing: border-box;
+    padding: 4em 0;
+}
+.darkpixels {
+    background-image: url('../images/darkpixels.png');
+}
+
+.container {
+    position: relative;
+    width: 32em;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+
+    @media (max-width: 600px) {
+        margin-top: 0;
+        width: 64em;
+        max-width: 90%;
+    }
+
+    &.full {
+        width: 90% !important;
+        max-width: 100%;
+    }
+
+    h2 {
+        position: relative;
+        font-size: 1.6em;
+        margin: 0 auto;
+        margin-bottom: 2em;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            border-bottom: 3px solid #D93F07;
+            left: 0;
+            bottom: -0.9em;
+        }
+    }
+    
+    .logo {
+        width: 14em;
+        margin: 0 auto;
+        margin-bottom: 2em;
+
+        .flame {
+            width: 75%;
+            margin-bottom: 10%;
+        }
+        .ignite {
+            width: 100%;
+
+            path {
+                fill: white;
+            }
+
+            #letter1 {
+                animation: igniteLoop 5s infinite 0s;
+            }
+            #letter2 {
+                animation: igniteLoop 5s infinite 0.05s;
+            }
+            #letter3 {
+                animation: igniteLoop 5s infinite 0.1s;
+            }
+            #letter4 {
+                animation: igniteLoop 5s infinite 0.15s;
+            }
+            #letter5 {
+                animation: igniteLoop 5s infinite 0.2s;
+            }
+            #letter6 {
+                animation: igniteLoop 5s infinite 0.25s;
+            }
+        }
+    }
+
+    .intro {
+        width: 16em;
+        margin: 0 auto;
+
+        font-weight: 300;
+        line-height: 1.4em;
+        color: white;
+
+        margin-bottom: 4em;
+    }
+
+    .next {
+        width: 3em;
+        height: 3em;
+        margin: 0 auto;
+        color: #D93F07;
+        text-align: center;
+        border-radius: 3px;
+        transition: all 0.25s ease;
+
+        a {
+            color: #D93F07;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: black;
+            background-color: #D93F07;
+            transition: all 0.25s ease;
+
+            a {
+                color: white;
+                transition: all 0.25s ease;
+            }
+        }
+    }
+    .row {
+        margin-bottom: 2em;
+    }
+}
+
+.mentors {
+    .col-sm-6 {
+        margin: 0;
+        margin-bottom: 2em;
+        .thumbnail {
+            padding: 0;
+            border: none;
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+
+            img {
+                width: 100%;
+                border-radius: 3px;
+            }
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.25em;
+        }
+        p {
+            font-weight: 300;
+            line-height: 1.25em;
+        }
+    }
+}
+
+@keyframes igniteLoop {
+    0% {
+        fill: white;
+    }
+    5% {
+        fill: #D93F07;
+    }
+    20% {
+        fill: white;
+    }
+    100% {
+        fill: white;
+    }
+}
