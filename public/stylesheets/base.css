@@ -69,6 +69,70 @@ body {
   100% {
     background: url('../images/loopbg1.png'); } }
 
+.navbar {
+  margin-bottom: 0;
+  background-color: rgba(50, 50, 50, 0.975);
+  border: none;
+  top: 0;
+  -webkit-transition: all 0.25s;
+          transition: all 0.25s;
+  height: 50px;
+  padding: 15px 0; }
+  .navbar.hiddenNav {
+    top: -60px;
+    -webkit-transition: all 0.25s;
+            transition: all 0.25s; }
+  .navbar .container-fluid {
+    position: relative;
+    height: 100%; }
+    .navbar .container-fluid .navbar-header {
+      position: relative;
+      height: 100%; }
+      .navbar .container-fluid .navbar-header .navbar-brand {
+        height: 100%;
+        padding: 0;
+        width: 5em;
+        margin-left: 2em !important; }
+        .navbar .container-fluid .navbar-header .navbar-brand img, .navbar .container-fluid .navbar-header .navbar-brand svg {
+          display: inline-block;
+          height: 100%; }
+          .navbar .container-fluid .navbar-header .navbar-brand img.ignite, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite {
+            margin-left: 0.5em;
+            height: 100%; }
+            .navbar .container-fluid .navbar-header .navbar-brand img.ignite path, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite path {
+              fill: white; }
+            .navbar .container-fluid .navbar-header .navbar-brand img.ignite #letter1, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite #letter1 {
+              -webkit-animation: igniteLoop 5s infinite 0s;
+                      animation: igniteLoop 5s infinite 0s; }
+            .navbar .container-fluid .navbar-header .navbar-brand img.ignite #letter2, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite #letter2 {
+              -webkit-animation: igniteLoop 5s infinite 0.05s;
+                      animation: igniteLoop 5s infinite 0.05s; }
+            .navbar .container-fluid .navbar-header .navbar-brand img.ignite #letter3, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite #letter3 {
+              -webkit-animation: igniteLoop 5s infinite 0.1s;
+                      animation: igniteLoop 5s infinite 0.1s; }
+            .navbar .container-fluid .navbar-header .navbar-brand img.ignite #letter4, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite #letter4 {
+              -webkit-animation: igniteLoop 5s infinite 0.15s;
+                      animation: igniteLoop 5s infinite 0.15s; }
+            .navbar .container-fluid .navbar-header .navbar-brand img.ignite #letter5, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite #letter5 {
+              -webkit-animation: igniteLoop 5s infinite 0.2s;
+                      animation: igniteLoop 5s infinite 0.2s; }
+            .navbar .container-fluid .navbar-header .navbar-brand img.ignite #letter6, .navbar .container-fluid .navbar-header .navbar-brand svg.ignite #letter6 {
+              -webkit-animation: igniteLoop 5s infinite 0.25s;
+                      animation: igniteLoop 5s infinite 0.25s; }
+    .navbar .container-fluid .navbar-nav {
+      position: relative;
+      height: 100%; }
+      .navbar .container-fluid .navbar-nav li {
+        position: relative;
+        height: 100%; }
+        .navbar .container-fluid .navbar-nav li a {
+          position: relative;
+          height: 100%;
+          padding: 0 0.5em;
+          color: #cfcfcf; }
+          .navbar .container-fluid .navbar-nav li a.active {
+            color: #F28627; }
+
 @media (max-height: 600px) {
   .page {
     height: 600px; } }
@@ -76,13 +140,90 @@ body {
   top: 50%;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0); }
+  .page .container h2 {
+    color: white;
+    font-weight: 100;
+    margin-bottom: 0; }
+    .page .container h2 .bigIcon {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.5em; }
+      .page .container h2 .bigIcon.trippy {
+        position: relative;
+        left: -4px;
+        text-shadow: 4px 4px 0 #F28627, 8px 8px 0 #D93F07; }
 
 .page-fluid {
   box-sizing: border-box;
   padding: 4em 0; }
+  .page-fluid .container h2::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    border-bottom: 3px solid #D93F07;
+    left: 0;
+    bottom: -0.9em; }
+  .page-fluid .container .item {
+    font-size: 1.2em;
+    line-height: 2em; }
+
+span.orange {
+  color: #F28627; }
 
 .darkpixels {
-  background-image: url('../images/darkpixels.png'); }
+  background-image: url('../images/darkpixels.png');
+  background-attachment: fixed; }
+
+.hero1 {
+  position: relative;
+  background-image: url('../images/hero1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .hero1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.75; }
+
+.hero2 {
+  position: relative;
+  background-image: url('../images/hero2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .hero2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.75; }
+
+.hero3 {
+  position: relative;
+  background-image: url('../images/hero3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .hero3::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.75; }
 
 .container {
   position: relative;
@@ -91,26 +232,21 @@ body {
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box; }
+  @media (min-width: 992px) {
+    .container.full {
+      width: 90% !important;
+      max-width: 100%; } }
   @media (max-width: 600px) {
-    .container {
-      margin-top: 0;
-      width: 64em;
-      max-width: 90%; } }
-  .container.full {
-    width: 90% !important;
-    max-width: 100%; }
+    .container.full {
+      width: 24em !important;
+      max-width: 90%; }
+      .container.full .col-xs-6 {
+        width: 100%; } }
   .container h2 {
     position: relative;
     font-size: 1.6em;
     margin: 0 auto;
     margin-bottom: 2em; }
-    .container h2::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      border-bottom: 3px solid #D93F07;
-      left: 0;
-      bottom: -0.9em; }
   .container .logo {
     width: 14em;
     margin: 0 auto;
@@ -174,24 +310,57 @@ body {
   .container .row {
     margin-bottom: 2em; }
 
-.mentors .col-sm-6 {
+.mentors .col-md-3 {
   margin: 0;
+  box-sizing: border-box;
+  padding: 0 1em;
   margin-bottom: 2em; }
-  .mentors .col-sm-6 .thumbnail {
-    padding: 0;
-    border: none;
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 1em; }
-    .mentors .col-sm-6 .thumbnail img {
+  .mentors .col-md-3 .block {
+    box-shadow: 0 3px 0.5em #cfcfcf;
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 3px;
+    -webkit-transition: all 0.1s;
+            transition: all 0.1s; }
+    .mentors .col-md-3 .block:hover {
+      box-shadow: 0 9px 1.5em #333333;
+      -webkit-transition: all 0.1s;
+              transition: all 0.1s; }
+    .mentors .col-md-3 .block .thumbnail {
+      padding: 0;
+      border: none;
       width: 100%;
-      border-radius: 3px; }
-  .mentors .col-sm-6 h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.25em; }
-  .mentors .col-sm-6 p {
-    font-weight: 300;
-    line-height: 1.25em; }
+      margin: 0 auto;
+      margin-bottom: 1em; }
+      .mentors .col-md-3 .block .thumbnail img {
+        width: 100%;
+        border-radius: 3px; }
+    .mentors .col-md-3 .block h3 {
+      font-size: 1.2em;
+      margin-bottom: 0.25em; }
+    .mentors .col-md-3 .block p {
+      position: relative;
+      width: 100%;
+      font-weight: 300;
+      line-height: 1.25em; }
+      .mentors .col-md-3 .block p .smallText {
+        font-size: 0.8em; }
+      .mentors .col-md-3 .block p .ellipsis {
+        color: #D93F07;
+        display: block;
+        font-size: 2em;
+        line-height: 1.5em; }
+        @media (max-width: 600px) {
+          .mentors .col-md-3 .block p .ellipsis {
+            display: none; } }
+      .mentors .col-md-3 .block p .hiddenText {
+        position: relative;
+        width: 100%;
+        font-size: 2em;
+        line-height: 1.5em; }
+        .mentors .col-md-3 .block p .hiddenText a {
+          display: inline-block;
+          width: 33%; }
 
 @-webkit-keyframes igniteLoop {
   0% {
